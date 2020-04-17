@@ -18,21 +18,18 @@ Void Menus :: welcome()
     " skill level until you have tamed them. Each animal will have a different " <<
     "skillset, so depending on what animal you pick you will be completing a " <<
     "different number of levels within each challenge." << endl << endl <<
-    "So, lets pick your first animal. But first, what is your name?" << endl;
+    "So, lets pick your first animal. << endl;
     
-    string str;
-    cin >> str;
-    username = user;
     
-    cout << "Great " << str << ", here is a list of animals" <<
-    "and their skill levels, take your pick!" << endl;
+    cout << "Here is a list of animals and their skill levels, take your pick!" << endl;
     
     string tier1 = Menus.animalMenuTier1();
-    animalType = tier1;
+    animal.setAnimalType(tier1);
     
-    cout << str << " is a great choice! What would you like to name them?" << endl;
+    cout << tier1 << " is a great choice! What would you like to name them?" << endl;
+    string str;
     cin >> str;
-    animalName = str
+    animal.setanimalName(str);
     
     cout << "You are set to begin the challenges!" << endl;
 }
