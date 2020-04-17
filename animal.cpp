@@ -22,14 +22,15 @@ Animal :: Animal()
 }
 
 
-Void Animal :: setAnimal(string);
+Void Animal :: setAnimal(string type);
 {
-    // takes string and sets the animal type to this
+    animalType = type;
 }
 
-Void Animal :: setAnimalName (string);
+Void Animal :: setAnimalName (string name);
 {
     // takes a string from user for what name they want to give their animal
+    animalName = name;
 }
 
 Void Animal :: increaseSkillLevel(bool); 
@@ -40,14 +41,19 @@ Void Animal :: increaseSkillLevel(bool);
 
 String Animal :: getAnimalName();
 {
-    //gets the set animal name
+    return animalName;
 }
 
 
-Void Animal :: getStats(); 
+Void Animal :: printStats(int i); 
 {
+    cout << animals[i].getObedience() << endl;
+    cout << animals[i].getSpeaking() << endl;
+    cout << animals[i].getNavigation() << endl;
+    cout << animals[i].getFighting() << endl;
+    cout << animals[i].getAgility() << endl;
+    cout << animals[i].getRescue() << endl;
     // gets the current stats for the animal
-    // will be used at the end of completing a level/challenge
 }
 
 Void Animal :: writeAnimalStats(string);
