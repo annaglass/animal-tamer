@@ -20,7 +20,7 @@ void Play :: readAnimals(string filename);
 	while (getline(project3, line))
     {
     	split(line, ",", str, 7);
-    	animals[count].setAnimalName(str[0]);
+    	animals[count].setAnimalType(str[0]);
     	animals[count].setObedience(stoi(str[1]));
     	animals[count].setSpeaking(stoi(str[2]));
     	animals[count].setNavigation(stoi(str[3]));
@@ -33,6 +33,7 @@ void Play :: readAnimals(string filename);
 
 Void playChallenge1()
 {
+	
 	// 1. call menu for the levels
 	// 2. use return value for a switch statement
 	// 3. Switch for the different levels within the challenge
