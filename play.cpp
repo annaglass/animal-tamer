@@ -36,11 +36,19 @@ Void playChallenges()
 	// 1. call menu for the levels
 	int userChoice = menus.challengeMenu1();
 	// 2. use return value for a switch statement
+	
 	switch ()
 	{
 		
-		case 1: // obedience
-			cout << "
+		case 1:
+			while(score<5){
+				cout << "Time to work on your pet's obedience." << endl;
+				cout << "You're walking with your pet when they leave your side to go chase a frog" << endl;
+				cout << "You can't find them anywhere, what do you do?" << endl;
+				cout << "Options:  1. call their name, 2. whistle for them, 3. Cry" << endl;
+				cout << "" << endl;
+				
+			}
 		
 				
 				
