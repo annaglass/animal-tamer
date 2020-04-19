@@ -65,19 +65,29 @@ Void playChallenges()
 				<< "2. Ayo what's up who are you?" << endl << "3. Nothing, I'll get the door" << endl;
 				int choice;
 				cin >> choice;
+				//make sure to check if they have 5
 				if (choice == 1)
 				{
-					cout << "
+					cout << "You ask your pet to say 'who's there?'" << endl 
+					<< "Your pet runs away." << endl;
+					cout << "Now what?" << endl;
+					cout << "---- Options ----" << endl << "1. Console them and ask them again." << endl 
+					<< "2. Ignore them and go to the door to see your friend" << endl;
+					cin >> choice
+					if (choice == 1)
+					{
+						cout << "You comfort your pet and ask them to greet the visitor again." << endl;
+						cout << "They 
 				}
 		}
 			
-		case 3:
+		case 3: //navigation - glass
 			
-		case 4:
+		case 4: //fighting - hendricks
 			
-		case 5:
+		case 5: //agility - glass
 			
-		case 6:
+		case 6: //rescue - hendricks
 		
 			
 			
