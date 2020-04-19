@@ -57,9 +57,9 @@ Void playChallenges()
 		case 2: //speaking 
 		{
 			int score = animal.getSpeaking();
+			cout << "Let's work on your pet's speaking!" << endl;
 			while (score < 5) 
 			{
-				cout << "Let's work on your pet's speaking!" << endl;
 				cout << "Your friend comes to the door and knocks, and you want to know who it is." << endl;
 				cout << "What do you ask your pet to say?" << endl;
 				cout << "---- Options ----" << endl << "1. Who's there?" << endl 
@@ -244,14 +244,19 @@ Void playChallenges()
 					"she ends up going home." << endl;
 					animal.setSpeaking(animal.getSpeaking()-2);
 				}
+				animal.printStats();
+				if (animal.getSpeaking() < 5)
+				{
+					cout << "It looks like your pet's speaking score is less than 5, you must" << endl
+					<< "repeat the challenge until you reach 5!" << endl;
+				}
 			}
 			break;
 		}
 			
 		case 3: //navigation - glass
 		{
-			int score = animal.getNavigation();
-			while (score < 5) 
+			while (animal.getNavigation() < 5) 
 			{
 				cout << "You venture to the Swiss Alps for the winter with your pet, bringing only a" << endl <<
 				" Backpack and a whole lot of excitement. Your pet brings a sack of treats and a" << endl <<
@@ -365,17 +370,32 @@ Void playChallenges()
 				<< "that hitched a ride to get the money back. Your pet successfully navigated" << endl << 
 				"Switzerland and the financial world." << endl;
 				animal.setNavigation(animal.getNavigation()+1);
-				if (animal.getSpeaking() == 5)
+				if (animal.getNavigation() == 5)
 				{
 					break;
 				}
+				animal.printStats();
+				if (animal.getNavigation() < 5)
+				{
+					cout << "It looks like your pet's navigation score is less than 5, you must" << endl
+					<< "repeat the challenge until you reach 5!" << endl;
+				}
 			}
 			break;
+		}
 
 			
 		case 4: //fighting - hendricks
 			
 		case 5: //agility - glass
+		{
+			while (animal.getAgility() < 5)
+			{
+				
+			}
+			break;
+		}
+				
 			
 		case 6: //rescue - hendricks
 		
