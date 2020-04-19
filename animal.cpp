@@ -33,29 +33,60 @@ Void Animal :: setAnimalName (string name);
     animalName = name;
 }
 
-void Animal :: readAnimals(string filename);
+Void Animal :: setObedience(int level);
 {
-	ifstream project3;
-	project3.open(filename);
-	string str[7];
-	string line;
-	int count = 0;
-	
-	while (getline(project3, line))
-    {
-    	split(line, ",", str, 7);
-    	animals[count].setAnimalType(str[0]);
-    	animals[count].setObedience(stoi(str[1]));
-    	animals[count].setSpeaking(stoi(str[2]));
-    	animals[count].setNavigation(stoi(str[3]));
-    	animals[count].setFighting(stoi(str[4]));
-    	animals[count].setAgility(stoi(str[5]));
-    	animals[count].setRescue(stoi(str[6]));
-    	count++;
-    }
+    obedience = level;
 }
 
-int Animal 
+Void Animal :: setSpeaking(int level);
+{
+    speaking = level;
+}
+
+Void Animal :: setNavigation(int level);
+{
+    navigation = level;
+}
+
+Void Animal :: setAgility(int level);
+{
+    agility = level;
+}
+
+Void Animal :: setRescue(int level);
+{
+    rescue = level;
+}
+
+Void Animal :: getObedience(int level);
+{
+    return obedience;
+}
+
+Void Animal :: getSpeaking(int level);
+{
+    return speaking;
+}
+
+Void Animal :: getNavigation(int level);
+{
+    return navigation;
+}
+
+Void Animal :: getfighting(int level);
+{
+    return fighting;
+}
+
+Void Animal :: getAgility(int level);
+{
+    return agility;
+}
+
+Void Animal :: getRescue(int level);
+{
+    return rescue;
+}
 
 Void Animal :: increaseSkillLevel(bool); 
 {
@@ -79,6 +110,40 @@ Void Animal :: printStats(int i);
     cout << "Agility: " << animals[i].getAgility() << endl;
     cout << "Rescuse: " << animals[i].getRescue() << endl;
     // gets the current stats for the animal
+}
+
+Int Animal :: findChallenge(int i)
+{
+     	int obed = animals[i].getObedience();
+	if (obed < 5)
+	{
+		return 1;
+	}
+	int speak = animals[i].getSpeaking();
+	if (speak < 5)
+	{
+		return 2;
+	}
+	int nav = animals[i].getNavigation();
+	if (nav < 5)
+	{
+		return 3;
+	}
+	int fight = animals[i].getFighting();
+	if (fight < 5)
+	{
+		return 4;
+	}
+	int agil = animals[i].getAgility();
+	if (agil < 5)
+	{
+		return 5;
+	}
+	int resc = animals[i].getRescue();
+	if (resc < 5)
+	{
+		return 6;
+	}
 }
 
 Void Animal :: writeAnimalStats(string);
