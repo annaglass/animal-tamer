@@ -27,5 +27,11 @@ Class Animal{
         void getStats(); //get animals current stats 
         void getAllAnimalStats(string); // we write animal stats to a file once a user finishes with that animal, this will read that file when the user wants to see its stats
         bool sufficientSkillLevel(int, int);
-
+        void readAnimals(string filename);
+        int getObedience();
+        int getSpeaking();
+        int getNavigation();
+        int getFighting();
+        int get Agility();
+        int getRescue();
 };
