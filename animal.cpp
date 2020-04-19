@@ -33,6 +33,30 @@ Void Animal :: setAnimalName (string name);
     animalName = name;
 }
 
+void Animal :: readAnimals(string filename);
+{
+	ifstream project3;
+	project3.open(filename);
+	string str[7];
+	string line;
+	int count = 0;
+	
+	while (getline(project3, line))
+    {
+    	split(line, ",", str, 7);
+    	animals[count].setAnimalType(str[0]);
+    	animals[count].setObedience(stoi(str[1]));
+    	animals[count].setSpeaking(stoi(str[2]));
+    	animals[count].setNavigation(stoi(str[3]));
+    	animals[count].setFighting(stoi(str[4]));
+    	animals[count].setAgility(stoi(str[5]));
+    	animals[count].setRescue(stoi(str[6]));
+    	count++;
+    }
+}
+
+int Animal 
+
 Void Animal :: increaseSkillLevel(bool); 
 {
     // 1. Takes bool as to whether they completed the level or not
