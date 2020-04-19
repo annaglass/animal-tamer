@@ -388,14 +388,260 @@ Void playChallenges()
 		case 4: //fighting - hendricks
 			
 		case 5: //agility - glass
-		{
-			while (animal.getAgility() < 5)
-			{
-				
-			}
-			break;
-		}
-				
+			cout << "You take your animal to the forest for the day, and you stumble upon a" << endl <<
+			"high ropes course and an agility course. This is the perfect place to work on your animal’s" << endl <<
+			"agility! “There are hundreds of other animals practicing and racing on the courses, and" << endl <<
+			"your animal sees his friend and goes to play with them." << endl;
+
+			int agilityCourse = 1;
+			switch (agilityCourse):
+				case 1: // slalom poles
+					cout << "Welcome to the slalom poles! This will test your animal's intelligence" << endl <<
+					"and speed! Your pet’s friend starts, whizzing through the poles and making it" << endl <<
+					"through all 20 in 5 seconds. Your pet follows, what do they do?" << endl;
+					cout << "---- Options ----" << endl << "1. Follows and does it in the same amount <<
+					"of time, first try." << endl << "2. Follows and misses a couple of poles" << endl << 
+					"3. Refuses to do the course" << endl;
+					cin >> choice;
+					
+					if (choice == 1)
+					{
+						cout << "Your pet tries to go full speed through the course, and" << endl <<
+						"ends up hurting himself and isn’t able to continue working on the poles." << endl;
+						if (animal.getAgility() >= 1)
+						{
+							animal.setAgility(animal.getAgility()-1);
+						}
+					}
+					else if (choice == 2)
+					{
+						Cout << "Your pet follows and exceeds your expectations by getting" << 
+						"every Pole with a top 5 time." << endl;
+						animal.setAgility(animal.getAgility() + 2);
+					}
+					else
+					{
+						Cout << "Your pet sits by the fence of the agility course, hurting his" <<
+						"reputation and confidence in his agility." << endl;
+						If (animal.getAgility() >= 2)
+						{
+							animal.setAgility(animal.getAgility() - 2);
+						}
+					}
+
+				case 2: // hoops
+					cout << "Welcome to the moving hoops. These hoops fly and spin, making it a very difficult to master" << endl;
+					int score = 0;
+					cout << "There are 7 hoops. For each hoop, call out which direction your animal" << endl << 
+					"should Jump! Type ‘1’ for left, ‘2’ for right, and ‘3’ for straight up." << endl;
+					cout << "Hoop 1: " << endl;
+					cin >> choice;
+					if  (choice == 1)
+					{
+						cout << "Hit!" << endl;
+						score++;
+					}
+					else
+					{
+						cout << "Miss!" << endl;
+					}
+					cout << "Hoop 2: " << endl;
+					cin >> choice;
+					if  (choice == 3)
+					{
+						cout << "Hit!" << endl;
+						score++;
+					}
+					else
+					{
+						cout << "Miss!" << endl;
+					}
+					cout << "Hoop 3: " << endl;
+					cin >> choice;
+					if  (choice == 2)
+					{
+						cout << "Hit!" << endl;
+						score++;
+					}
+					else
+					{
+						cout << "Miss!" << endl;
+					}
+					cout << "Hoop 4: " << endl;
+					cin >> choice;
+					if  (choice == 2)
+					{
+						cout << "Hit!" << endl;
+						score++;
+					}
+					else
+					{
+						cout << "Miss!" << endl;
+					}
+					cout << "Hoop 5: " << endl;
+					cin >> choice;
+					if  (choice == 1)
+					{
+						cout << "Hit!" << endl;
+						score++;
+					}
+					else
+					{
+						cout << "Miss!" << endl;
+					}
+					cout << "Hoop 6: " << endl;
+					cin >> choice;
+					if  (choice == 3)
+					{
+						cout << "Hit!" << endl;
+						score++;
+					}
+					else
+					{
+						cout << "Miss!" << endl;
+					}
+					cout << "Hoop 7: " << endl;
+					cin >> choice;
+					if  (choice == 3)
+					{
+						cout << "Hit!" << endl;
+						score++;
+					}
+					else
+					{
+						cout << "Miss!" << endl;
+					}
+					
+					cout << "Score: " << score << endl;
+					if (score >= 5 && <= 7)
+					{
+						cout << "Your animal gained 3 agility points!" << endl;
+						animal.setAgility(animal.getAgility + 3);
+					}
+					else if (score >= 3 && score <= 4)
+					{
+						cout << "Your animal gained 2 agility points!" << endl;
+						animal.setAgility(animal.getAgility + 2);
+					}
+					else if (score > 0 && score <= 2)
+					{
+						cout << "Your animal gained 1 agility point!" << endl;
+						animal.setAgility(animal.getAgility + 1);
+					}
+					else
+					{
+						cout << "Your animal gained no agility points." << endl;
+					}
+					cout << "Congrats! You finished the practice round. Now onto the high 
+					ropes race!" << endl;
+
+				Case 3: //race
+					double time = 0;
+					cout << "Welcome to the high ropes race course! It’s your animal against two" << endl <<
+					"others, try to make it to the end with the fastest time possible!" << endl;
+					cout << "GET IN POSITION: READY, SET, GO!" << endl;
+					cout << "Quick! Does your animal climb up the ladder or the rope?" << endl;
+					cin >> choice;
+					if (toLower(choice) == "ladder")
+					{
+						cout << "They leap up the ladder, take a sharp left, and stop at the" << endl <<
+						"end of a ledge. In front of them is a zipline and a paraglider." << endl <<
+						"Which one do you choose?" << endl;
+						cin >> choice;
+						if (toLower(choice) == "zipline")
+						{
+							cout << "The animal in front of them beats them to it, so they" << endl << 
+							"have to reel the handles back in. They lose some time, but" << endl <<
+							"flies down the zipline and dives into the lake at the bottom." << endl << 
+							"Which stroke do they do to get across?" << endl;
+							cout << "---- Options ----" << endl << "1. Butterfly"
+							<< endl << "2. Freestyle" << endl << "3. Backstroke" << endl;
+							cin >> choice;
+							if (choice == 1)
+							{
+								cout << "Everyone knows butterfly is impossible! Your" << 
+								"animal flaps frantically and struggles to stay afloat," << endl <<
+								"and lose a bit of time, but makes it to the finish line." << endl;
+								time = 180;
+							}
+							else if (choice == 2)
+							{
+								cout << "Good choice! Your animal is the fastest across" <<
+								"the lake, and gets to the finish line in okay time." << endl;
+								time = 130;
+							}
+							else if (choice == 3)
+							{
+								cout << "Animals can’t really do backstroke, but it was" <<
+								"a good idea! They end up doing an awkward torpedo" << endl <<
+								"motion to get to the end, kinda cool but hurt their time a bit." << endl;
+								time = 160;
+							}
+						else if (toLower(choice == "paraglider")
+						{
+							cout << "You fly over the zipline and the lake, going directly" <<
+							"to the end. You won the race!" << endl;
+							time = 60;
+						}
+					}
+					else if (toLower(choice == "rope")
+					{
+						cout << "Your animal shuffles up the rope, at the top a tire swing" << endl << 
+						"to the left, and a set of monkey bars to the right. At the end" << 
+						"of both is a net, which do you pick?" << endl;
+						cin >> choice;
+						if (toLower(choice) == "tire swing")
+						{
+							cout << "The tire swing is too short to reach the net, so your" << endl <<
+							"animal takes a leap of faith and thankfully makes it to the" << endl <<
+							"bottom of the net, barely. But they have to climb up to the" << endl <<
+							"top, which adds some time. At the top is a large downhill ramp," << endl <<
+							"with a mini jeep and a skateboard. Which do you pick?" << endl;
+							cin >> choice;
+							if (toLower(choice) == "jeep")
+							{
+								cout << "Your animal accelerates to the top speed, going" <<
+								"over bumps and potholes flawlessly. They drive right" <<  
+								"straight to the finish line." << endl;
+								time = 140;
+							}	
+							else if (toLower(choice) == "skateboard")
+							{
+								cout << "Your animal flies down at top speed, but hits a" <<
+								"bump and flies off the board, landing just before" << endl <<
+								"the finish line. They are so hurt they have to" << 
+								"crawl to the finish line." << endl;
+								time = 200;
+							}
+						}
+						else if (toLower(choice) == "monkey bars")
+						{
+							cout << "At the end of the monkey bars, the drop to the net is" << endl <<
+							"really far, so your animal gets scared. You call out to them saying" << endl
+							<< "they can do it, and eventually they jump but at the cost of" << endl <<
+							"lost time. At the bottom, there’s a mountain biking course." << endl
+							<< "Which bike do you pick?" << endl;
+							cout << "---- Options ----" << endl << "1. The blue cruiser" << endl 
+							<< "2. The Yellow Mountain Bike" << endl;
+							cin >> choice;
+							if (choice == 1)
+							{
+								cout << "Though comfortable, the tire pops and your" <<  
+								"animal ends up sprinting through the course with the bike" << endl
+								<< "on their back. They make it to the end, but barely." << endl;
+								time = 180;
+							}
+							else 
+							{
+								cout << "The bike serves your animal well, you fly through" <<
+								"the course making every turn perfectly, and make a great time." << endl;
+								time = 130;
+							}
+						}
+					}
+					cout << "Your animal’s time: " << time/60.0 << endl;
+					animal.setAgility(animal.getAgility()+2);	
+					break;	
 			
 		case 6: //rescue - hendricks
 		
