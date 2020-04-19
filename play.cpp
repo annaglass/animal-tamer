@@ -34,10 +34,9 @@ void Play :: readAnimals(string filename);
 Void playChallenges()
 {
 	// 1. call menu for the levels
-	int userChoice = menus.challengeMenu1();
+	int challenge = animal.findChallenge();
 	// 2. use return value for a switch statement
-	
-	switch ()
+	switch (challenge)
 	{
 		
 		case 1:
