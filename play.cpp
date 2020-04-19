@@ -39,12 +39,12 @@ Void playChallenges()
 	switch (challenge)
 	{
 		
-		case 1:
-			while(score<5){
+		case 1: //obedience
+			while(score < 5){
 				cout << "Time to work on your pet's obedience." << endl;
 				cout << "You're walking with your pet when they leave your side to go chase a frog" << endl;
 				cout << "You can't find them anywhere, what do you do?" << endl;
-				cout << "Options:  1. call their name, 2. whistle for them, 3. Cry" << endl;
+				cout << "Options:  1. Call their name, 2. Whistle for them, 3. Cry" << endl;
 				cout << "" << endl;
 				
 			}
@@ -54,7 +54,22 @@ Void playChallenges()
 				
 				
 		
-		case 2: // 
+		case 2: //speaking 
+		{
+			int score = animal.getSpeaking();
+			while (score < 5) {
+				cout << "Let's work on your pet's speaking!" << endl;
+				cout << "Your friend comes to the door and knocks, and you want to know who it is." << endl;
+				cout << "What do you ask your pet to say?" << endl;
+				cout << "---- Options ----" << endl << "1. Who's there?" << endl 
+				<< "2. Ayo what's up who are you?" << endl << "3. Nothing, I'll get the door" << endl;
+				int choice;
+				cin >> choice;
+				if (choice == 1)
+				{
+					cout << "
+				}
+		}
 			
 		case 3:
 			
@@ -71,29 +86,4 @@ Void playChallenges()
 	// calls increaseSkillLevel from animal.h
 }
 	
-// all of these functions will do the same thing as playChallenge1, 
-// with different levels (though has the same number of levels)
-Void playChallenge2( )
-{
-	
-}
 
-Void playChallenge3( )
-{
-	
-}
-
-Void playChallenge4( )
-{
-	
-}
-
-Void playChallenge5( )
-{
-	
-}
-
-Void playChallenge6( )
-{
-	
-}
