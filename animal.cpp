@@ -47,12 +47,13 @@ String Animal :: getAnimalName();
 
 Void Animal :: printStats(int i); 
 {
-    cout << animals[i].getObedience() << endl;
-    cout << animals[i].getSpeaking() << endl;
-    cout << animals[i].getNavigation() << endl;
-    cout << animals[i].getFighting() << endl;
-    cout << animals[i].getAgility() << endl;
-    cout << animals[i].getRescue() << endl;
+    cout << a
+    cout << "Obedience: " << animals[i].getObedience() << endl;
+    cout << "Speaking: " << animals[i].getSpeaking() << endl;
+    cout << "Navigation: " << animals[i].getNavigation() << endl;
+    cout << "Fighting: " << animals[i].getFighting() << endl;
+    cout << "Agility: " << animals[i].getAgility() << endl;
+    cout << "Rescuse: " << animals[i].getRescue() << endl;
     // gets the current stats for the animal
 }
 
@@ -60,6 +61,7 @@ Void Animal :: writeAnimalStats(string);
 {
     // when a user moves on to the next tier or chooses to quit, it writes
     // their stats to a file (essentially saving their data)
+    
 }
 
 Bool Animal :: sufficientSkillLevel(int, int);
