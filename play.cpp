@@ -9,11 +9,56 @@ Play :: Play()
 	//constructor
 }
 
-Void playChallenge1()
+void Play :: readAnimals(string filename);
 {
+	ifstream project3;
+	project3.open(filename);
+	string str[7];
+	string line;
+	int count = 0;
 	
+	while (getline(project3, line))
+    {
+    	split(line, ",", str, 7);
+    	animals[count].setAnimalType(str[0]);
+    	animals[count].setObedience(stoi(str[1]));
+    	animals[count].setSpeaking(stoi(str[2]));
+    	animals[count].setNavigation(stoi(str[3]));
+    	animals[count].setFighting(stoi(str[4]));
+    	animals[count].setAgility(stoi(str[5]));
+    	animals[count].setRescue(stoi(str[6]));
+    	count++;
+    }
+}
+
+Void playChallenges()
+{
 	// 1. call menu for the levels
+	int userChoice = menus.challengeMenu1();
 	// 2. use return value for a switch statement
+	switch ()
+	{
+		
+		case 1: // obedience
+			cout << "
+		
+				
+				
+				
+				
+		
+		case 2: // 
+			
+		case 3:
+			
+		case 4:
+			
+		case 5:
+			
+		case 6:
+		
+			
+			
 	// 3. Switch for the different levels within the challenge
 	// 4. each switch case will play through the levels
 	// calls increaseSkillLevel from animal.h
