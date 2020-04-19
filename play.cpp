@@ -223,6 +223,99 @@ Void playChallenges()
 		}
 			
 		case 3: //navigation - glass
+		{
+			int score = animal.getNavigation();
+			while (score < 5) {
+				cout << "You venture to the Swiss Alps for the winter with your pet, bringing only a" << endl <<
+				" Backpack and a whole lot of excitement. Your pet brings a sack of treats and a" << endl <<
+				"toothbrush, and is ready for the journey of a lifetime.” << endl;
+				Cout << "You decide to hitch a ride on a boat sailing from Boston as you are low on " << endl <<
+				"money. On the second night at sea, the headwinds ramp up and wake everyone up from " << endl <<
+				"their slumber. The captain's compass loses direction and the boat sways to the side " << endl <<
+				"in the harsh waves, the captain not knowing where the boat is going. What do you do?” << endl;
+				Cout << "---- Options ----" << endl << "1. Ask your pet to climb to the top of the post and " <<
+				"look for a sign of land or direction." << endl << "2. Take control of the boat and guess" <<  
+				"where to go" << endl << "3. Leave it to the captain" << endl;
+				Cin >> choice;
+				If (choice == 1)
+				{
+				Cout << "Your pet climbs to the highest point on the boat, and sees an island nearby. " <<
+					He tells the captain to steer the boat sharply to the right, and you dock the boat safely at the beach for the night.” << endl;
+					animal.setNavigation(animal.getNavigation()+1);
+				}
+				Else if (choice == 1)
+				{
+					Cout << “You take control of the boat but soon get lost as dark clouds come 
+				rolling in, water floods the boat but you luckily make it to a nearby island where 
+				you lodge the boat into the side of a cliff. You hang there for the night, and depart 
+				the next morning with luckily minimal damage to the boat.” << endl;
+				If (animal.getNavigation() >=1)
+				{
+					animal.setNavigation(animal.getNavigation()-1);
+				}
+				}
+				else 
+				{
+					Cout << “The captain safely takes the boat to a calm patch where the compass 
+				regains direction and everyone goes back to sleep. The headwinds set you back 
+				on your journey a day, but at least you’re all safe.” << endl;
+				}
+					Cout << “The rest of the journey is smooth sailing, and after a beautiful and calm ride 
+				through the River Rhine, you make it to Switzerland. You look for a train to Zurich as you heard the hot chocolate and views are amazing there, but can’t find it. What do you do?” << endl;
+				Cout << “---- Options ----” << endl << “1. Stay where you are and set up a tent, it’s pretty there anyway” << endl << “2. Ask your pet if they can help find the train station” << endl;
+				Cin >> choice;
+				If (choice == 1)
+				{
+					Cout << “You set up a tent and sleep under the stars, until midnight when your 
+				pet sees the North Star shining bright. You pack everything up, and your pet 
+				takes you both to Zurich on foot through the night. By dawn you arrive in Zurich, 
+				and accompany breakfast with a classic swiss hot chocolate.” << endl;
+				animal.setNavigation(animal.getNavigation()+2);
+				}
+				Else
+				{
+					Cout << “You ask your pet to help find the train station, but they get confused and 
+				ends up getting hit by a local Swiss on a bike and gets discouraged. You spend a 
+				quarter of your budget on a hotel room for the night, but end up making a friend 
+				there that gives you a ride to Zurich in the morning.” << endl;
+				animal.setNavigation(animal.getNavigation()-1);
+				}
+				Cout << “The next day, you hike up to the slopes with your skis, ready to take in the mountain air and shred the gnar. Swiss ski resorts are a bit dangerous, so you must learn quickly and act like a local to stay safe. Once you lift to the top of the slopes, you have the option to go right or left. Which do you choose?” << endl;
+				Cout << “1. Left” << endl << “2. Right” << endl;
+				Cin >> choice;
+				If (choice == left)
+				{
+					Cout << “Uh oh, you found yourself in the triple diamond glades, and neither of 
+				you have skied a day in your life. What do you do?” << endl;
+				Cout << “---- Options ----” << endl << “1. Hike back up to the top” << endl << “2. 
+				Send it. Life’s too short to not fly down a Switzerland ski mountain with no 
+				experience.” << endl;
+				Cin >> choice;
+				If (choice == 1)
+				{
+					Cout << “You both get scared once you get back to the top about what 
+				could be on the right side, so you take the ski lift down.” << endl;
+				If (animal.getNavigation() >=1)
+				{
+					animal.setNavigation(animal.getNavigation()-1);
+				}
+				}
+				If (choice == 2)
+				{
+					Cout << “On the count of 3 you both take a leap of faith of the first cliff. 
+				Your pet flawlessly navigates through cliffs, jumps, and avalanches, and you follow having the time of your life. It’s an experience you’ll never forget. << endl;
+				animal.setNavigation(animal.getNavigation()+3);
+				}
+				}
+				If (choice == right)
+				{
+					Cout << “You chose the bunny hill. Fun, but not sendy. You had a long day of 
+				skiing and eating fries at the scenic restaurant at the top!” << endl;
+				}
+				Cout << “Your pet drives a boat back to America, asking a fare from the 50 people that hitched a ride to get the money back. Your pet successfully navigated Switzerland and the financial world.” << endl;
+				animal.setNavigation(animal.getNavigation()+1);
+			}
+
 			
 		case 4: //fighting - hendricks
 			
