@@ -7,31 +7,27 @@ using namespace std;
 
 Class Animal{
     private:
-        static const int SIZE = 6;
-        string animalName;
-        string animalType;
+        string animalName, animalType;
         int obedience, speaking, navigation, fighting, agility, rescue;
 
-        
     public:
-        void setAnimal(string);
+        Animal();    
+        void setAnimalType(string);
+        void setAnimalName (string);
         void setObedience(int);
         void setSpeaking(int);
         void setNavigation(int);
         void setFighting(int);
         void setAgility(int);
         void setRescue(int);
-        void setAnimalName (string);
-        void increaseSkillLevel(int, int, bool); //takes position in matrix and bool if they finished the challenge
-        string getAnimalName();
-        void getStats(); //get animals current stats 
-        void getAllAnimalStats(string); // we write animal stats to a file once a user finishes with that animal, this will read that file when the user wants to see its stats
-        bool sufficientSkillLevel(int, int);
-        void readAnimals(string filename);
         int getObedience();
         int getSpeaking();
         int getNavigation();
         int getFighting();
         int get Agility();
         int getRescue();
+        string getAnimalName();
+        void printStats(); //get animals current stats 
+        void findChallenge();
+        void writeAnimalStats();
 };
