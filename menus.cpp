@@ -23,10 +23,10 @@ Void Menus :: welcome()
     
     cout << "Here is a list of animals and their skill levels, take your pick!" << endl;
     
-    string tier1 = Menus.animalMenuTier1();
-    animal.setAnimalType(tier1);
+    string animalChoice = animalMenu();
+    animal.setAnimalType(animalChoice);
     
-    cout << tier1 << " is a great choice! What would you like to name them?" << endl;
+    cout << animalChoice << " is a great choice! What would you like to name them?" << endl;
     string str;
     cin >> str;
     animal.setanimalName(str);
@@ -34,14 +34,15 @@ Void Menus :: welcome()
     cout << "You are set to begin the challenges!" << endl;
 }
 
-String Menus :: animalMenuTier1( ) 
+String Menus :: animalMenu() 
 {
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i <= 6; i++)
     {
         cout << animals[i].getAnimalType() << endl;
-        cout << animal.printStats(i) << endl;
+        cout << animal.printStats() << endl;
     }
     //3 animal options for tier 1, displays stats
+
     string str;
     cin >> str;
     // cout and cin user choice for animal
@@ -49,24 +50,7 @@ String Menus :: animalMenuTier1( )
     // returns the animal
 }
 
-String Menus :: animalMenuTier2( )
-{
-    
-    for (int i = 4; i <= 7; i++)
-    {
-        cout << animals[i].getAnimalType() << endl;
-        cout << animal.printStats(i) << endl;
-    }
-    //3 animal options for tier 2, displays stats
-    string str;
-    cin >> str;
-    // cout and cin user choice for animal
-    return str;
-    // returns the animal
-}
-
-
-Int Menus :: endOfTierMenu( )
+Int Menus :: endOfTierMenu()
 {
     cout << "Congratulations! You have tamed the " << animal.getAnimalType() 
     << "and " << animal.getAnimalName() << " is now your very own. What would you like to do next?" << endl;
