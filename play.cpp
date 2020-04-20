@@ -52,131 +52,71 @@ Void Play :: playChallenges()
 				animal.writeAnimalStats;
 				break;
 			case 1:
-				int score = animal.getObedience();
-				while(score<5)
+			{
+			int score = animal.getObedience();
+			while(score<5)
+			{
+				cout << "Time to work on your pet's obedience." << endl << "You're walking with your pet when they leave your side to go chase a frog" << endl;
+				cout << "You can't find them anywhere, what do you do?" << endl << "Pick 1,2 or 3:  1. Call their name, 2. Whistle for them, 3. Keep searching" << endl;
+				cin >> obedienceOption1;
+				switch(obedienceOption1)
 				{
-					cout << "Time to work on your pet's obedience." << endl << "You're walking with your pet when they leave your side to go chase a frog" << endl;
-					cout << "You can't find them anywhere, what do you do?" << endl << "Pick 1,2 or 3:  1. Call their name, 2. Whistle for them, 3. Keep searching" << endl;
-					cin >> obedienceOption1;
-					switch(obedienceOption1)
-					{
-						case 1:
-						    score+=1;
-							cout << "Your pet doesn't come, you: 1. Call again  2. Start searching for them " << endl;
-							cin >> obedienceOption2;
-							switch (obedienceOption2)
-							{
-								case 1:
-								    score+=1;
-									cout << "Your pet comes! How do you greet them? 1. Pet them and put a leash on them  2. Scorn them " << endl;
-									cin >> obedienceOption3;
-									switch (obedienceOption3)
-									{
-									    case 1:
-										cout << "They feel accomplished and now know how to be obedient!" << endl;
-										score+=3;
-										animal.setObedience(5);
-										break;
-
-									    case 2:
-										cout << "They now know not to run away from you any more" << endl;
-										score +=3;
-										animal.setObedience(5);
-										break;
-									}
-
-
-								case 2:
-								    cout << "You find your pet chasing the frog, you: 1. Chase them down  2. Whistle loud and tell them to come" << endl;
-								    cin >> obedienceOption4;
-								    switch (obedienceOption4)
-									{
-									    case 1:
-										cout << "You caught up to them so you: 1. Put them on a leash  2. Tell them to sit" << endl;
-										cin >> obedienceOption5;
-										switch(obedienceOption5)
-										{
-										    case 1:
-											cout << "Your pet is happy to be back with you! They increase their obedience to you. They show how loyal they are to you so you can feel comfortable to take the leash off" << endl;
-											animal.setObedience(5);
-											score+=4;
-											break;
-
-										    case 2:
-											cout << "Your pet sits on your command and learns to not to run away from you." << endl;
-											animal.setObedience(5);
-											score+=4;
-											break;
-										}
-
-
-									    case 2: 
-										cout << "They hear you and obediently come to you! You pet now knows how to come at the sound of your whistle." << endl;
-										animal.setObedience(5);
-										score +=3;
-										break;
-									}	
-							}
-
-						case 2:
-							cout << "Your pet comes! How do you greet them? 1. Pet them and put a leash on them  2. Scorn them for running away" << endl;
-							cin >> obedienceOption2;
-							switch (obedienceOption2)
-							{
-							    case 1:
-								cout << "Your pet feels so accomplished, but how will you make sure they don't run away next time?" << endl;
-								cout << "1. Scorn them  2. Make them sit and let them think about what they did." << endl;
-								cin>> obedienceOption3;
-								switch(obedienceOption3)
-								{
-									case 1:
-										cout << "Your pet feels bad for running away, he learns his lesson to not to do it again." << endl;
-										animal.setObedience(5);
-										score +=5;
-										break;
-									case 2:
-										cout << "Your pet feels bad for running away, he learns his lesson to not to do it again." << endl;
-										animal.setObedience(5);
-										score +=5;
-										break;
-								}
-							    case 2:
-								cout << "Your pet feels bad for running away, he learns his lesson to not to do it again." << endl;
-								animal.setObedience(5);
-								score +=5;
-								break;
-							}
-						case 3:
-							cout << "You find your pet chasing the frog, you: 1. Chase them down  2. Whistle loud and tell them to come" << endl;
-							cin >> obedienceOption2;
-							switch (obedienceOption2)
-							{
-							    case 1:
-								cout << "You caught up to them so you: 1. Put them on a leash  2. Tell them to sit" << endl;
+					case 1:
+					    score+=1;
+						cout << "Your pet doesn't come, you: 1. Call again  2. Start searching for them " << endl;
+						cin >> obedienceOption2;
+						switch (obedienceOption2)
+						{
+							case 1:
+							    score+=1;
+								cout << "Your pet comes! How do you greet them? 1. Pet them and put a leash on them  2. Scorn them " << endl;
 								cin >> obedienceOption3;
-								switch(obedienceOption3)
+								switch (obedienceOption3)
 								{
 								    case 1:
-									cout << "Your pet is happy to be back with you! They increase their obedience to you. They show how loyal they are to you so you can feel comfortable to take the leash off" << endl;
-									score+=5;
-									break;
-
+								        cout << "They feel accomplished and now know how to be obedient!" << endl;
+								        score+=3;
+									animal.setObedience(5);
+								        break;
+								        
 								    case 2:
-									cout << "Your pet sits on your command and learns to not to run away from you." << endl;
-									score+=5;
-									break;
+								        cout << "They now know not to run away from you any more" << endl;
+								        score +=3;
+									animal.setObedience(5);
+								        break;
 								}
-								break;
-
-							    case 2: 
-								cout << "They hear you and obediently come to you! You pet now knows how to come at the sound of your whistle." << endl;
-								score +=5;
-								break;
-							}
-							break;
-					}
-				}
-				}	
+								
+								
+							case 2:
+							    cout << "You find your pet chasing the frog, you: 1. Chase them down  2. Whistle loud and tell them to come" << endl;
+							    cin >> obedienceOption4;
+							    switch (obedienceOption4)
+								{
+								    case 1:
+								        cout << "You caught up to them so you: 1. Put them on a leash  2. Tell them to sit" << endl;
+								        cin >> obedienceOption5;
+								        switch(obedienceOption5)
+								        {
+								            case 1:
+								                cout << "Your pet is happy to be back with you! They increase their obedience to you. They show how loyal they are to you so you can feel comfortable to take the leash off" << endl;
+								                animal.setObedience(5);
+										score+=4;
+								                break;
+								                
+								            case 2:
+								                cout << "Your pet sits on your command and learns to not to run away from you." << endl;
+										animal.setObedience(5);
+								                score+=4;
+								                break;
+								        }
+								        
+								    case 2: 
+								        cout << "They hear you and obediently come to you! You pet now knows how to come at the sound of your whistle." << endl;
+									animal.setObedience(5);
+								        score +=3;
+								        break;
+								}	
+						}	
 
 
 			case 2: //speaking 
