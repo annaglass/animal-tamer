@@ -6,7 +6,7 @@ using namespace std;
 
 Menus :: Menus()
 {
-    //constructor
+    userInput = 0;
 }
 
 Void Menus :: welcome()
@@ -76,17 +76,15 @@ Int Menus :: endOfTierMenu( )
     cout << "1. Keep working with my current animal" << endl;
     cout << "2. Move on to the next tier of animals" << endl;
     cout << "3. Save and quit playing" << endl;
-    int userChoice;
-    cin >> userChoice;
+    cin >> userInput;
     // returns user choice
-    return userChoice;
+    return userInput;
 }
 
 Int Menus :: endOfChallenge()
 {
     animal.printStats();
     cout << "==== MENU ====" << endl << "1. Do challenges" << endl << "2. Save and quit" << endl;
-    int userInput;
     cin >> userInput;
     if (userInput == 1)
     {
