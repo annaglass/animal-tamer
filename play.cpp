@@ -986,178 +986,348 @@ Void Play :: playChallenges()
 								}
 						}
 				}
-}
-while (challenge !=0);
-			
-	// 3. Switch for the different levels within the challenge
-	// 4. each switch case will play through the levels
-	// calls increaseSkillLevel from animal.h
+	} while (challenge !=0);
 }
 							 
 							 
 Void Play :: elephantGame;
 {
-	int ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10, ans11, ans12, ans13, ans14, ans15, ans16, ans17, ans18, ans19, asn20;
-	int score=0;
-	cout << "Welcome to the final challenge young grasshopper. In this challenge, you'll be solving" << endl <<
-	"20 increasingly difficult problems and riddles to prove yourself to Great Princess Diana the Elephant III." << endl <<
-	//https://www.mentalfloss.com/article/55640/7-behaviors-prove-elephants-are-incredibly-smart
-	"Elephants are some of the most intelligent and beautiful creatures on Earth. They have the largest brain of" << endl <<
-	"of any land animal, with 3x as many neurons as humans. Did you know they can even identify languages?" << endl <<
-	"Only the most intellegent man on Earth can tame Princess Diana. When you finish the 20 questions, your score" << endl <<
-	"will decide if you are worthy enough to tame her." << endl;
-
-	cout << "-----------------------------------------------------------------------------------------------------" << endl;
-	cout << "Let's get started with the questions." << endl;
-	int ans1;
-	cout << "A man is going to a party. Along the way he meets a man with seven wives." << endl << "Each of the wives as seven bags. Each of the bags have seven cats. Each of" << endl << "the cats has seven kittens. Each of the kittens has seven toys. How many people are going to the party?" << endl;
-	cin >> ans1;
-	if(ans1==1)
-	{
-		score+=1;
-		cout << "Correct!" << endl;
-	}
-	else
-	{
-		cout << "Incorrect." << endl;
-	}
+	int elephantChoice = 0;
+	while (elephantChoice != 2) {
+		int score = 0;
+		elephantChoice = 0;
+		cout << "Welcome to the final challenge young grasshopper. In this challenge, you'll be solving" << endl <<
+		"20 increasingly difficult problems and riddles to prove yourself to Great Princess Diana the Elephant III." << endl <<
+		//https://www.mentalfloss.com/article/55640/7-behaviors-prove-elephants-are-incredibly-smart
+		"Elephants are some of the most intelligent and beautiful creatures on Earth. They have the largest brain of" << endl <<
+		"of any land animal, with 3x as many neurons as humans. Did you know they can even identify languages?" << endl <<
+		"Only the most intellegent man on Earth can tame Princess Diana. When you finish the 20 questions, your score" << endl <<
+		"will decide if you are worthy enough to tame her." << endl;
+		cout << "-----------------------------------------------------------------------------------------------------" << endl;
+		cout << "Let's get started with the questions." << endl;
+		
+		int ans1;
+		cout << "A man is going to a party. Along the way he meets a man with seven wives." << endl 
+		<< "Each of the wives as seven bags. Each of the bags have seven cats. Each of" << endl << 
+		"the cats has seven kittens. Each of the kittens has seven toys." << endl <<
+		"How many people are going to the party?" << endl;
+		cin >> ans1;
+		if(ans1 == 1)
+		{
+			score+=1;
+			cout << "Correct!" << endl;
+		}
+		else
+		{
+			cout << "Incorrect." << endl;
+		}
+		
+		string ans2;
+		cout << "You have to break me to use me. What am I?" << endl;
+		cin >> ans2;
+		if(toLower(ans2) == "egg" || toLower(ans2) == "an egg")
+		{
+			score+=1;
+			cout << "Correct!" << endl;
+		}
+		else
+		{
+			cout << "Incorrect." << endl;
+		}
+		
+		string ans3;
+		cout << "I am wet when drying. What am I?" << endl;
+		cin >> ans3;
+		if(toLower(ans3) == "towel" || toLower(ans3) == "a towel")
+		{
+			score+=1;
+			cout << "Correct!" << endl;
+		}
+		else
+		{
+			cout << "Incorrect." << endl;
+		}	
+		
+		int ans4;
+		cout << "What is: 4 + 2 * 8 / 4 ?"
+		cin >> ans4;
+		if(ans4 == 8)
+		{
+			score+=1;
+			cout << "Correct!" << endl;
+		}
+		else
+		{
+			cout << "Incorrect." << endl;
+		}
+		
+		string ans5;
+		cout << "What word is always pronounced wrong?" << endl;
+		cin >> ans5;
+		if(toLower(ans5) == "wrong")
+		{
+			score+=1;
+			cout << "Correct!" << endl;
+		}
+		else
+		{
+			cout << "Incorrect." << endl;
+		}
+		
+		string ans6;
+		cout << "Which of these is the largest? Megabyte, Kilobyte, Gigabyte, or Terabyte" << endl;
+		cin >> ans6;
+		if(toLower(ans6) == "terabyte")
+		{
+			score+=1;
+			cout << "Correct!" << endl;
+		}
+		else
+		{
+			cout << "Incorrect." << endl;
+		}
+		
+		int ans7;
+		cout << "How many colors does a Rubik's cube have?" << endl;
+		cin >> ans7;
+		if(ans7 == 6)
+		{
+			score+=1;
+			cout << "Correct!" << endl;
+		}
+		else
+		{
+			cout << "Incorrect." << endl;
+		}
+		
+		string ans8;
+		cout << "I am present in a laptop. I am also a human's t-shirt. I have the highest mark in class" 
+		<< endl << "I am usually described as something above. What am I?" << endl;
+		cin >> ans8;
+		if(toLower(ans8) == "top")
+		{
+			score+=1;
+			cout << "Correct!" << endl;
+		}
+		else
+		{
+			cout << "Incorrect." << endl;
+		}
+		
+		string ans9;
+		cout << "Which of these animals has the most legs? A crab, bee, giraffe or octopus?" << endl;
+		cin >> ans9;
+		if(toLower(ans9) == "octopus")
+		{
+			score+=1;
+			cout << "Correct!" << endl;
+		}
+		else
+		{
+			cout << "Incorrect." << endl;
+		}
+		
+		int ans10;
+		cout << "How many elements are there in the periodic table? 110, 118, 152 or 161" << endl;
+		cin >> ans10;
+		if(toLower(ans10) == 118)
+		{
+			score+=1;
+			cout << "Correct!" << endl;
+		}
+		else
+		{
+			cout << "Incorrect." << endl;
+		}
 	
-	string ans2;
-	string egg="egg";
-	cout << "You have to break me to use me. What am I?" << endl;
-	cin >> ans2;
-	if(toLower(ans2)==egg)
-	{
-		score+=1;
-		cout << "Correct!" << endl;
+		string ans11;
+		cout << "Someone's mother has 4 sons, named North, South, and East." << endl
+		<< "What is the name of the 4th son." << endl;
+		cin >> ans11;
+		if (toLower(ans11 == "what")
+		{
+			cout << "Correct!" << endl;
+			score++;
+		}
+		else
+		{
+			cout << "Incorrect." << endl;
+		}
+		
+		string ans12;
+		cout << "A man is sleeping and goes to the fridge to get some food." << endl
+		<< "There is a carton of milk, a cheese stick, and 2 eggs." << endl
+		"What does he open first?" << endl;
+		cin >> ans12;
+		if (toLower(ans12) == "eyes" || toLower(ans12) == "his eyes")
+		{
+			cout << "Correct!" << endl;
+			score++;
+		}
+		else
+		{
+			cout << "incorrect." << endl;
+		}
+		
+		// https://bestlifeonline.com/tricky-math-questions/
+		int ans13;
+		cout << In a parking lot, the numbers of the spots are in order as follows: << endl
+		<< "16      06      68      88     --     98." << endl <<
+		"A car is parked in the 5th spot so you can't see the number." << endl <<
+		"What is the number of the 5th parking spot the car is parked in?" << endl;
+		cin >> ans13;
+		if (ans13 == 87)
+		{
+			cout << "Correct!" << endl;
+			score++;
+		}
+		else
+		{
+			cout << "incorrect." << endl;
+		}
+		
+		int ans14;
+		cout << "There is a cat, a turtle, and a table. When the cat is sitting on" << endl
+		<< "the table and the turtle is on the ground, the distance between the" << endl <<
+		"top of the turtle to the top of the cat is 170cm. When the turtle is sitting" << endl <<
+		"on the table and the cat is on the ground. The distance between the top of" << endl <<
+		"the cat to the top of the turtle is 130cm. How tall is the table?" << endl;
+		cin >> ans14
+		if (ans14 == 150)
+		{
+			cout << "Correct!" << endl;
+			score++;
+		}
+		else
+		{
+			cout << "incorrect." << endl;
+		}
+		
+		int ans15;
+		cout << "There is a patch of lily pads on a lake. Everyday, the patch doubles in size"
+		<< endl << "If it takes 48 days for the patch to cover the entire like, how long would" 
+		<< endl << "it take for the patch to cover half the lake? (enter an integer for the number of days) << endl;
+		cin >> ans15;
+		if (ans15 == 47)
+		{
+			cout << "Correct!" << endl;
+			score++;
+		}
+		else
+		{
+			cout << "incorrect." << endl;
+		}
+		
+		// https://www.rd.com/funny-stuff/challenging-riddles/
+		string ans16;
+		cout << "I have cities, but no houses. I have mountains, but no trees." << endl <<
+		"I have water, but no fish. What am I?" << endl;
+		cin >> ans16;
+		if (toLower(ans16) == "map" || toLower(ans16) == "a map")
+		{
+			cout << "Correct!" << endl;
+			score++;
+		}
+		else
+		{
+			cout << "incorrect." << endl;
+		}
+		
+		//http://brainden.com/logic-riddles.htm
+		string ans17;
+		cout << "What can travel around the world while staying in a corner?" << endl;
+		cin >> ans17;
+		if (toLower(ans17) == "stamp" || toLower(ans17) == "a stamp")
+		{
+			cout << "Correct!" << endl;
+			score++;
+		}
+		else
+		{
+			cout << "incorrect." << endl;
+		}
+		
+		string ans18;
+		cout << "Who makes it, has no need for it." << endl <<
+		"Who buys it, has no use for it." << endl <<
+		"Who uses it can neither see nor feel it." << endl <<
+		"What is it?" << endl;
+		cin >> ans18;
+		if (toLower(ans18) == "coffin" || toLower(ans18) == "a coffin")
+		{
+			cout << "Correct!" << endl;
+			score++;
+		}
+		else
+		{
+			cout << "incorrect." << endl;
+		}
+		
+		string ans19;
+		cout << "I am an odd number. Take away a letter and I become even." << endl <<
+		"What number am I?" << endl;
+		
+		if (toLower(ans19) == "seven" || ans17 == "7")
+		{
+			cout << "Correct!" << endl;
+			score++;
+		}
+		else
+		{
+			cout << "incorrect." << endl;
+		}
+		
+		//https://metro.co.uk/2015/10/15/quiz-these-tricky-maths-problems-are-very-difficult-to-solve-5439872/
+		int ans20;
+		cout << "At a party, everyone shook hands with everyone else. There were" << endl <<
+		"66 handshakes. How many people were at the party?" << endl;
+		cin >> ans20
+		if (ans20 == 12)
+		{
+			cout << "Correct!" << endl;
+			score++;
+		}
+		else
+		{
+			cout << "incorrect." << endl;
+		}
+		
+		double scorePercent = setprecision(2) << fixed << 100(score/20.0);
+		cout << "You got " << score << " questions correct out of 20." << endl <<
+		"Your percent score is " << scorePercent << "%." << endl;
+		
+		if (score >= 18)
+		{
+			cout << "You have proved yourself to Princess Diana young grasshopper." << endl <<
+			"You have finished the game, and only the most noble and intelligent of men" << endl <<
+			"achieve this accomplishment.Now you may venture off into the sunset" << endl <<
+			"with your tamed Great Elephant. Thank you for playing! We wish you the best." << endl;
+			elephantChoice = 2;
+		}
+		
+		if (score >= 13 && score < 18)
+		{
+			cout << "You are so close to being worthy of taming the Great Princess Diana." << endl <<
+			"With just a bit more practice you will get there, young grasshopper." << endl;
+		}
+		
+		if (score < 13 && score >= 7)
+		{
+			cout << "You definitely need some practice, but you're not the worst." << endl <<
+			"You can do it!"  << endl;
+		}
+		
+		if (score < 7)
+		{
+			cout << "I'm sorry young grasshopper, this is a pretty rough score." << endl <<
+			"We think you should rethink your life a bit before returning to the game." << endl;
+		}
+		
+		if (score < 18)
+		{
+			cout << "Would you like to play again?" << endl << "1. Yes, play again"
+			<< endl << "2. No, quit game" << endl;
+			cin >> elephantChoice;
+		}
 	}
-	else
-	{
-		cout << "Incorrect." << endl;
-	}
-	
-	string ans3;
-	string towel="towel";
-	cout << "I am wet when drying. What am I?" << endl;
-	cin >> ans3;
-	if(toLower(ans3)==towel)
-	{
-		score+=1;
-		cout << "Correct!" << endl;
-	}
-	else
-	{
-		cout << "Incorrect." << endl;
-	}	
-	
-	int ans4;
-	cout << "What is:  4 + 2 * 8 / 4 ?"
-	cin >> ans4;
-	if(ans4==8)
-	{
-		score+=1;
-		cout << "Correct!" << endl;
-	}
-	else
-	{
-		cout << "Incorrect." << endl;
-	}
-	
-	string ans5;
-	string wrong="wrong";
-	cout << "What word is always pronounced wrong?" << endl;
-	cin >> ans5;
-	if(toLower(ans5)==wrong)
-	{
-		score+=1;
-		cout << "Correct!" << endl;
-	}
-	else
-	{
-		cout << "Incorrect." << endl;
-	}
-	
-	string ans6;
-	string terabyte="terabyte";
-	cout << "Which of these is the largest? Megabyte, Kilobyte, Gigabyte, or Terabyte" << endl;
-	cin >> ans6;
-	if(toLower(ans6)==wrong)
-	{
-		score+=1;
-		cout << "Correct!" << endl;
-	}
-	else
-	{
-		cout << "Incorrect." << endl;
-	}
-	
-	int ans6;
-	cout << "How many colors does a Rubik's cube have?" << endl;
-	cin >> ans6;
-	if(ans6==6)
-	{
-		score+=1;
-		cout << "Correct!" << endl;
-	}
-	else
-	{
-		cout << "Incorrect." << endl;
-	}
-	
-	int ans7;
-	cout << "How many colors does a Rubik's cube have?" << endl;
-	cin >> ans7;
-	if(ans7==122)
-	{
-		score+=1;
-		cout << "Correct!" << endl;
-	}
-	else
-	{
-		cout << "Incorrect." << endl;
-	}
-	
-	string ans8;
-	string top="top";
-	cout << "I am present in a laptop. I am also a human's t-shirt. I have the highest mark in class" << endl << "I am usually described as something above. What am I?" << endl;
-	cin >> ans8;
-	if(toLower(ans8)==top)
-	{
-		score+=1;
-		cout << "Correct!" << endl;
-	}
-	else
-	{
-		cout << "Incorrect." << endl;
-	}
-	
-	string ans9;
-	string octopus="octopus";
-	cout << "Which of these animals has the most legs? Crab, Bee, Giraffe or Octopus?" << endl;
-	cin >> ans9;
-	if(toLower(ans9)==octopus)
-	{
-		score+=1;
-		cout << "Correct!" << endl;
-	}
-	else
-	{
-		cout << "Incorrect." << endl;
-	}
-	
-	int ans10;
-	cout << "How many elements are there in the periodic table? 110, 118, 152 or 161" << endl;
-	cin >> ans10;
-	if(toLower(ans10)==118)
-	{
-		score+=1;
-		cout << "Correct!" << endl;
-	}
-	else
-	{
-		cout << "Incorrect." << endl;
-	}
-	
-
-
 }
