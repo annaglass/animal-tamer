@@ -11,11 +11,11 @@ Menus :: Menus()
 
 Void Menus :: welcome()
 {
-    cout << "Welcome to Animal Tamer, the game designed to take you through " <<
+    cout << "Welcome to Animal Tamer, the game designed to take you through " << endl << 
     "the steps of pet ownership and training, with three levels of animals, " << endl <<
-    "challenges and trials. We will start with the first tier, where you will" <<
+    "challenges and trials. We will start with the first tier, where you will" << endl << 
     " pick your animal to navigate these challenges and trials, increasing their" << endl <<
-    " skill level until you have tamed them. Each animal will have a different " <<
+    " skill level until you have tamed them. Each animal will have a different " << endl << 
     "skillset, so depending on what animal you pick you will be completing a " << endl <<
     "different number of levels within each challenge." << endl << endl <<
     "So, lets pick your first animal. << endl;
