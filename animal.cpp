@@ -133,8 +133,17 @@ Void Animal :: findChallenge(int i)
 	}
 }
 
-Void Animal :: writeAnimalStats(string);
+Void Animal :: writeAnimalStats();
 {
     // when a user moves on to the next tier or chooses to quit, it writes
-    // their stats to a file (essentially saving their data)   
+    // their stats to a file (essentially saving their data)  
+	ofstream project3("animalstats.txt);
+	project3.open("animalstats.txt);
+	
+	project3 << getAnimalName() << getObedience() << "," << getSpeaking() "," << getNavigation()
+	<< "," << getFighting() << "," << getAgility() << "," << getRescue();
+		     	  
+	project3.close();
+	cout << "Your progress has been saved!" << endl;
+	cout << "Thanks for playing Animal Tamer, we'll see you soon!" << endl;		  			  
 }
