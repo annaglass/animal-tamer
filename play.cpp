@@ -995,16 +995,169 @@ while (challenge !=0);
 }
 							 
 							 
-Void Play :: elephantGame
-							 
-cout << "Welcome to the final challenge young grasshopper. In this challenge, you'll be solving" << endl <<
-"20 increasingly difficult problems and riddles to prove yourself to Great Princess Diana the Elephant III." << endl <<
-//https://www.mentalfloss.com/article/55640/7-behaviors-prove-elephants-are-incredibly-smart
-"Elephants are some of the most intelligent and beautiful creatures on Earth. They have the largest brain of" << endl <<
-"of any land animal, with 3x as many neurons as humans. Did you know they can even identify languages?" << endl <<
-"Only the most intellegent man on Earth can tame Princess Diana. When you finish the 20 questions, your score" << endl <<
-"will decide if you are worthy enough to tame her." << endl;
+Void Play :: elephantGame;
+{
+	int ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10, ans11, ans12, ans13, ans14, ans15, ans16, ans17, ans18, ans19, asn20;
+	int score=0;
+	cout << "Welcome to the final challenge young grasshopper. In this challenge, you'll be solving" << endl <<
+	"20 increasingly difficult problems and riddles to prove yourself to Great Princess Diana the Elephant III." << endl <<
+	//https://www.mentalfloss.com/article/55640/7-behaviors-prove-elephants-are-incredibly-smart
+	"Elephants are some of the most intelligent and beautiful creatures on Earth. They have the largest brain of" << endl <<
+	"of any land animal, with 3x as many neurons as humans. Did you know they can even identify languages?" << endl <<
+	"Only the most intellegent man on Earth can tame Princess Diana. When you finish the 20 questions, your score" << endl <<
+	"will decide if you are worthy enough to tame her." << endl;
 
-cout << "-----------------------------------------------------------------------------------------------------" << endl;
-cout << "Let's get started with the questions." << endl;
-							 
+	cout << "-----------------------------------------------------------------------------------------------------" << endl;
+	cout << "Let's get started with the questions." << endl;
+	int ans1;
+	cout << "A man is going to a party. Along the way he meets a man with seven wives." << endl << "Each of the wives as seven bags. Each of the bags have seven cats. Each of" << endl << "the cats has seven kittens. Each of the kittens has seven toys. How many people are going to the party?" << endl;
+	cin >> ans1;
+	if(ans1==1)
+	{
+		score+=1;
+		cout << "Correct!" << endl;
+	}
+	else
+	{
+		cout << "Incorrect." << endl;
+	}
+	
+	string ans2;
+	string egg="egg";
+	cout << "You have to break me to use me. What am I?" << endl;
+	cin >> ans2;
+	if(toLower(ans2)==egg)
+	{
+		score+=1;
+		cout << "Correct!" << endl;
+	}
+	else
+	{
+		cout << "Incorrect." << endl;
+	}
+	
+	string ans3;
+	string towel="towel";
+	cout << "I am wet when drying. What am I?" << endl;
+	cin >> ans3;
+	if(toLower(ans3)==towel)
+	{
+		score+=1;
+		cout << "Correct!" << endl;
+	}
+	else
+	{
+		cout << "Incorrect." << endl;
+	}	
+	
+	int ans4;
+	cout << "What is:  4 + 2 * 8 / 4 ?"
+	cin >> ans4;
+	if(ans4==8)
+	{
+		score+=1;
+		cout << "Correct!" << endl;
+	}
+	else
+	{
+		cout << "Incorrect." << endl;
+	}
+	
+	string ans5;
+	string wrong="wrong";
+	cout << "What word is always pronounced wrong?" << endl;
+	cin >> ans5;
+	if(toLower(ans5)==wrong)
+	{
+		score+=1;
+		cout << "Correct!" << endl;
+	}
+	else
+	{
+		cout << "Incorrect." << endl;
+	}
+	
+	string ans6;
+	string terabyte="terabyte";
+	cout << "Which of these is the largest? Megabyte, Kilobyte, Gigabyte, or Terabyte" << endl;
+	cin >> ans6;
+	if(toLower(ans6)==wrong)
+	{
+		score+=1;
+		cout << "Correct!" << endl;
+	}
+	else
+	{
+		cout << "Incorrect." << endl;
+	}
+	
+	int ans6;
+	cout << "How many colors does a Rubik's cube have?" << endl;
+	cin >> ans6;
+	if(ans6==6)
+	{
+		score+=1;
+		cout << "Correct!" << endl;
+	}
+	else
+	{
+		cout << "Incorrect." << endl;
+	}
+	
+	int ans7;
+	cout << "How many colors does a Rubik's cube have?" << endl;
+	cin >> ans7;
+	if(ans7==122)
+	{
+		score+=1;
+		cout << "Correct!" << endl;
+	}
+	else
+	{
+		cout << "Incorrect." << endl;
+	}
+	
+	string ans8;
+	string top="top";
+	cout << "I am present in a laptop. I am also a human's t-shirt. I have the highest mark in class" << endl << "I am usually described as something above. What am I?" << endl;
+	cin >> ans8;
+	if(toLower(ans8)==top)
+	{
+		score+=1;
+		cout << "Correct!" << endl;
+	}
+	else
+	{
+		cout << "Incorrect." << endl;
+	}
+	
+	string ans9;
+	string octopus="octopus";
+	cout << "Which of these animals has the most legs? Crab, Bee, Giraffe or Octopus?" << endl;
+	cin >> ans9;
+	if(toLower(ans9)==octopus)
+	{
+		score+=1;
+		cout << "Correct!" << endl;
+	}
+	else
+	{
+		cout << "Incorrect." << endl;
+	}
+	
+	int ans10;
+	cout << "How many elements are there in the periodic table? 110, 118, 152 or 161" << endl;
+	cin >> ans10;
+	if(toLower(ans10)==118)
+	{
+		score+=1;
+		cout << "Correct!" << endl;
+	}
+	else
+	{
+		cout << "Incorrect." << endl;
+	}
+	
+
+
+}
