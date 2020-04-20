@@ -8,10 +8,6 @@ Animal :: Animal()
 {
     animalType = "";
     animalName = "";
-    for (int i; i < SIZE; i++)
-    {
-        scores[i] = 0;
-    }
     obedience = 0;
     speaking = 0;
     navigation = 0;
@@ -22,7 +18,7 @@ Animal :: Animal()
 }
 
 
-Void Animal :: setAnimal(string type);
+Void Animal :: setAnimalType(string type);
 {
     animalType = type;
 }
@@ -105,29 +101,29 @@ Void Animal :: printStats(int i);
     cout << "Rescuse: " << animals[i].getRescue() << endl;
 }
 
-Void Animal :: findChallenge(int i)
+Void Animal :: findChallenge()
 {
-	if (animals[i].getObedience() < 5)
+	if (getObedience() < 5)
 	{
 		cout << "Challenge 1: Obedience (Incomplete)" << endl;
 	}
-	if (animals[i].getSpeaking() < 5)
+	if (getSpeaking() < 5)
 	{
 		cout << "Challenge 2: Speaking (Incomplete)" << endl;
 	}
-	if (animals[i].getNavigation() < 5)
+	if (getNavigation() < 5)
 	{
 		cout << "Challenge 3: Navigation (Incomplete)" << endl;
 	}
-	if (animals[i].getFighting() < 5)
+	if (getFighting() < 5)
 	{
 		cout << "Challenge 4: Fighting (Incomplete)" << endl;
 	}
-	if (animals[i].getAgility() < 5)
+	if (getAgility() < 5)
 	{
 		cout << "Challenge 5: Agility (Incomplete)" << endl;
 	}
-	if (animals[i].getRescue() < 5)
+	if (getRescue() < 5)
 	{
 		cout << "Challenge 5: Agility (Incomplete)" << endl;
 	}
