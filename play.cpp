@@ -47,9 +47,9 @@ Void playChallenges()
 		switch (challenge)
 		{
 			case 0:
-				
+				animal.writeAnimalStats;
+				break;
 			case 1:
-				{
 				int score = animal.getObedience();
 				while(score<5)
 				{
@@ -1014,7 +1014,7 @@ Void playChallenges()
 									}
 							}
 					}
-	}
+}
 while (challenge !=0);
 			
 	// 3. Switch for the different levels within the challenge
