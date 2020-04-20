@@ -35,9 +35,11 @@ Void playChallenges()
 {
 	// 1. call menu for the levels
 	int obedienceOption1, obedienceOption2, obedienceOption3, obedienceOption4, obedienceOption5;
+	int speakingOption1, speakingOption2, speakingOption3, speakingOption4, speakingOption5;
+	int navigationOption1, navigationOption2, navigationOption3, navigationOption4, navigationOption5;
 	int fightingOption1, fightingOption2, fightingOption3, fightingOption4, fightingOption5;
+	int agilityOption1, agilityOption2, agilityOption3, agilityOption4, agilityOption5;
 	int rescueOption1, rescueOption2, rescueOption3, rescueOption4, rescueOption5;
-	int challenge = animal.findChallenge();
 	
 	// 2. use return value for a switch statement
 	
