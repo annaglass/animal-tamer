@@ -88,12 +88,6 @@ Void Animal :: getRescue(int level);
     return rescue;
 }
 
-Void Animal :: increaseSkillLevel(bool); 
-{
-    // 1. Takes bool as to whether they completed the level or not
-    // 2. Increases skill level corresponding the the challenge
-}
-
 String Animal :: getAnimalName();
 {
     return animalName;
@@ -102,59 +96,45 @@ String Animal :: getAnimalName();
 
 Void Animal :: printStats(int i); 
 {
-    cout << a
+    // gets the current stats for the animal
     cout << "Obedience: " << animals[i].getObedience() << endl;
     cout << "Speaking: " << animals[i].getSpeaking() << endl;
     cout << "Navigation: " << animals[i].getNavigation() << endl;
     cout << "Fighting: " << animals[i].getFighting() << endl;
     cout << "Agility: " << animals[i].getAgility() << endl;
     cout << "Rescuse: " << animals[i].getRescue() << endl;
-    // gets the current stats for the animal
 }
 
-Int Animal :: findChallenge(int i)
+Void Animal :: findChallenge(int i)
 {
-     	int obed = animals[i].getObedience();
-	if (obed < 5)
+	if (animals[i].getObedience() < 5)
 	{
-		return 1;
+		cout << "Challenge 1: Obedience (Incomplete)" << endl;
 	}
-	int speak = animals[i].getSpeaking();
-	if (speak < 5)
+	if (animals[i].getSpeaking() < 5)
 	{
-		return 2;
+		cout << "Challenge 2: Speaking (Incomplete)" << endl;
 	}
-	int nav = animals[i].getNavigation();
-	if (nav < 5)
+	if (animals[i].getNavigation() < 5)
 	{
-		return 3;
+		cout << "Challenge 3: Navigation (Incomplete)" << endl;
 	}
-	int fight = animals[i].getFighting();
-	if (fight < 5)
+	if (animals[i].getFighting() < 5)
 	{
-		return 4;
+		cout << "Challenge 4: Fighting (Incomplete)" << endl;
 	}
-	int agil = animals[i].getAgility();
-	if (agil < 5)
+	if (animals[i].getAgility() < 5)
 	{
-		return 5;
+		cout << "Challenge 5: Agility (Incomplete)" << endl;
 	}
-	int resc = animals[i].getRescue();
-	if (resc < 5)
+	if (animals[i].getRescue() < 5)
 	{
-		return 6;
+		cout << "Challenge 5: Agility (Incomplete)" << endl;
 	}
 }
 
 Void Animal :: writeAnimalStats(string);
 {
     // when a user moves on to the next tier or chooses to quit, it writes
-    // their stats to a file (essentially saving their data)
-    
-}
-
-Bool Animal :: sufficientSkillLevel(int, int);
-{
-    // takes the position on the matrix 
-    // checks if the animals skill level is high enough to move onto the next tier
+    // their stats to a file (essentially saving their data)   
 }
