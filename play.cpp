@@ -993,5 +993,18 @@ while (challenge !=0);
 	// 4. each switch case will play through the levels
 	// calls increaseSkillLevel from animal.h
 }
-	
+							 
+							 
+Void Play :: elephantGame
+							 
+cout << "Welcome to the final challenge young grasshopper. In this challenge, you'll be solving" << endl <<
+"20 increasingly difficult problems and riddles to prove yourself to Great Princess Diana the Elephant III." << endl <<
+//https://www.mentalfloss.com/article/55640/7-behaviors-prove-elephants-are-incredibly-smart
+"Elephants are some of the most intelligent and beautiful creatures on Earth. They have the largest brain of" << endl <<
+"of any land animal, with 3x as many neurons as humans. Did you know they can even identify languages?" << endl <<
+"Only the most intellegent man on Earth can tame Princess Diana. When you finish the 20 questions, your score" << endl <<
+"will decide if you are worthy enough to tame her." << endl;
 
+cout << "-----------------------------------------------------------------------------------------------------" << endl;
+cout << "Let's get started with the questions." << endl;
+							 
