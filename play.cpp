@@ -451,148 +451,24 @@ Void Play :: playChallenges()
 
 
 			case 4: //fighting
-			cout << "You and your pet are going on a hike in the mountains together. " << endl << "All of a sudden, a pack of rabid raccoons comes and starts angrily squeaking at you." << endl << "There's too many of them for you to defend yourself so you think you might need your pets help." << endl;
-			cout << "What command do you give to your pet?" << endl << "---- Options ----" << endl << "1. Help me fight them off!" << endl << "2. Run away!" << endl << "3. Don't move!" << endl;
-			cin >> fightingOption1;
-			switch(fightingOption1)
-			{
-				case 1: // Help me fight them off
-					score+=1;
-					cout << "Your pet looks to you reassuringly and ready to follow your lead" << endl;
-					cout << "What do you point them to do?" << endl;
-					cout << "---- Options ----" << endl << "1. Go after the least vicious raccoons" << endl << "2. Go after the leader of the raccoon pack" << endl;
-					cin >> fightingOption2;
-					switch(fightingOption2)
+				while (score < 5){
+					cout << "You and your pet are going on a hike in the mountains together. " << endl << "All of a sudden, a pack of rabid raccoons comes and starts angrily squeaking at you." << endl << "There's too many of them for you to defend yourself so you think you might need your pets help." << endl;
+					cout << "What command do you give to your pet?" << endl << "---- Options ----" << endl << "1. Help me fight them off!" << endl << "2. Run away!" << endl << "3. Don't move!" << endl;
+					cin >> fightingOption1;
+					switch(fightingOption1) // switch statement for user's choice
 					{
-						case 1:
-							cout << "Your pet heeds your command. They courageously attack the vicous raccoons before they could get to you. " << endl;
-							cout << "Your pet does enough damage to the raccoons so the rest of them are afraid to attack and you are now safe" << endl;
-							animal.setFighting(5);
-							score +=5;
-							break;
-						case 2:
-							cout << "Your pet goes after the leader of the pack" << endl;
-							cout << "Your pet struggles to fight the raccoon and you get scared that your pet might loose " << endl;
-							cout << "How do help your animal?" << endl;
-							cout << "---- Options ----" << endl << "1. Tell them to go for the raccoon's eyes" << endl << "2. Help him fight the pack leader" << endl;
-							cin >> fightingOption3;
-							switch(fightingOption3)
-							{
-								case 1:
-									cout << "Your pet follows your command and goes for the raccoon's weak spot: the eyes" << endl;
-									cout << "It works and your pet successfully beats the pack leader!" << endl;
-									cout << "Your pet's fighting abilities scare off the other raccoons and you leave the mountains and get to safety." << endl;
-									animal.setFighting(5);
-									score +=5;
-									break;
-								case 2:
-									cout << "You back up your pet and help him defeat the pack leader" << endl;
-									cout << "Your pet sees your fighting skills and learns from you how to fight" << endl;
-									cout << "Your defense skills scare off the other raccoons and you leave the mountains and get to safety." << endl;
-									animal.setFighting(5);
-									score +=5;
-									break;
-							}
-					}
-				case 2: // Run away
-					cout << "You and your pet take off but the raccoons chase after you!" << endl;
-					cout << "Your pets agility has not been properly trained so they start to fall behind" << endl;
-					cout << "Before you know it, the raccoons have caught up with your animal and you need to defend yourselves" << endl;
-					cout << "What do you say to your pet?" << endl;
-					cout << "---- Options ----" << endl << "1. Go after the least vicious raccoons" << endl << "2. Go after the leader of the raccoon pack" << endl;
-					cin >> fightingOption2;
-					switch(fightingOption2)
-					{
-						case 1:
-							cout << "Your pet heeds your command. They courageously attack the vicous raccoons before they could get to you. " << endl;
-							cout << "Your pet does enough damage to the raccoons so the rest of them are afraid to attack and you are now safe" << endl;
-							animal.setFighting(5);
-							score +=5;
-							break;
-						case 2:
-							cout << "Your pet goes after the leader of the pack" << endl;
-							cout << "Your pet struggles to fight the raccoon and you get scared that your pet might loose " << endl;
-							cout << "How do help your animal?" << endl;
-							cout << "---- Options ----" << endl << "1. Tell them to go for the raccoon's eyes" << endl << "2. Help him fight the pack leader" << endl;
-							cin >> fightingOption3;
-							switch(fightingOption3)
-							{
-								case 1:
-									cout << "Your pet follows your command and goes for the raccoon's weak spot: the eyes" << endl;
-									cout << "It works and your pet successfully beats the pack leader!" << endl;
-									cout << "Your pet's fighting abilities scare off the other raccoons and you leave the mountains and get to safety." << endl;
-									animal.setFighting(5);
-									score +=5;
-									break;
-								case 2:
-									cout << "You back up your pet and help him defeat the pack leader" << endl;
-									cout << "Your pet sees your fighting skills and learns from you how to fight" << endl;
-									cout << "Your defense skills scare off the other raccoons and you leave the mountains and get to safety." << endl;
-									animal.setFighting(5);
-									score +=5;
-									break;
-							}
-					}
-					
-				case 3: //dont move
-					cout << "You stand still with your pet. The raccoons stay where they are and continue to growl at you" << endl;
-					cout << "Slowly, the leader of the pack of the raccoons comes forward and gets into attacking position" << endl;
-					cout << "What you you tell your pet?" << endl;
-					cout << "---- Options ----" << endl << "1. Let's fight them off!" << endl << "2. Run away!" << endl;
-					cin >> fightingOption2;
-					switch(fightingOption2)
-					{
-						case 1:
+						case 1: // Help me fight them off
 							score+=1;
 							cout << "Your pet looks to you reassuringly and ready to follow your lead" << endl;
 							cout << "What do you point them to do?" << endl;
 							cout << "---- Options ----" << endl << "1. Go after the least vicious raccoons" << endl << "2. Go after the leader of the raccoon pack" << endl;
-							cin >> fightingOption3;
-							switch(fightingOption3)
-							{
-								case 1:
-									cout << "Your pet heeds your command. They courageously attack the raccoons before they could get to you. " << endl;
-									cout << "Your pet does enough damage to the raccoons so the rest of them are afraid to attack and you are now safe" << endl;
-									animal.setFighting(5);
-									score +=5;
-									break;
-								case 2:
-									cout << "Your pet goes after the leader of the pack" << endl;
-									cout << "Your pet struggles to fight the raccoon and you get scared that your pet might loose " << endl;
-									cout << "How do help your animal?" << endl;
-									cout << "---- Options ----" << endl << "1. Tell them to go for the raccoon's eyes" << endl << "2. Help him fight the pack leader" << endl;
-									cin >> fightingOption4;
-									switch(fightingOption4)
-									{
-										case 1:
-											cout << "Your pet follows your command and goes for the raccoon's weak spot, the eyes" << endl;
-											cout << "It works and your pet successfully beats the pack leader!" << endl;
-											cout << "Your pet's fighting abilities scare off the other raccoons and you leave the mountains and get to safety." << endl;
-											animal.setFighting(5);
-											score +=5;
-											break;
-										case 2:
-											cout << "You back up your pet and help him defeat the pack leader" << endl;
-											cout << "Your pet sees your fighting skills and learns from you how to fight" << endl;
-											cout << "Your defense skills scare off the other raccoons and you leave the mountains and get to safety." << endl;
-											animal.setFighting(5);
-											score +=5;
-											break;
-									}
-							}
-						case 2:
-							cout << "You and your pet take off but the raccoons chase after you!" << endl;
-							cout << "Your pets agility has not been properly trained so they start to fall behind" << endl;
-							cout << "Before you know it, the raccoons have caught up with your animal and you need to defend yourselves" << endl;
-							cout << "What do you say to your pet?" << endl;
-							cout << "---- Options ----" << endl << "1. Go after the least vicious raccoons" << endl << "2. Go after the leader of the raccoon pack" << endl;
 							cin >> fightingOption2;
-							switch(fightingOption2)
+							switch(fightingOption2) 
 							{
 								case 1:
 									cout << "Your pet heeds your command. They courageously attack the vicous raccoons before they could get to you. " << endl;
 									cout << "Your pet does enough damage to the raccoons so the rest of them are afraid to attack and you are now safe" << endl;
-									animal.setFighting(5);
+									animal.setFighting(5); // set fighting to 5 and break out of loop
 									score +=5;
 									break;
 								case 2:
@@ -607,20 +483,157 @@ Void Play :: playChallenges()
 											cout << "Your pet follows your command and goes for the raccoon's weak spot: the eyes" << endl;
 											cout << "It works and your pet successfully beats the pack leader!" << endl;
 											cout << "Your pet's fighting abilities scare off the other raccoons and you leave the mountains and get to safety." << endl;
-											animal.setFighting(5);
+											animal.setFighting(5); // set fighting to 5 and break out of loop
 											score +=5;
 											break;
 										case 2:
 											cout << "You back up your pet and help him defeat the pack leader" << endl;
 											cout << "Your pet sees your fighting skills and learns from you how to fight" << endl;
 											cout << "Your defense skills scare off the other raccoons and you leave the mountains and get to safety." << endl;
-											animal.setFighting(5);
+											animal.setFighting(5); // set fighting to 5 and break out of loop
 											score +=5;
 											break;
 									}
+									break;
 							}
+							break;
+						case 2: // Run away
+							cout << "You and your pet take off but the raccoons chase after you!" << endl;
+							cout << "Your pets agility has not been properly trained so they start to fall behind" << endl;
+							cout << "Before you know it, the raccoons have caught up with your animal and you need to defend yourselves" << endl;
+							cout << "What do you say to your pet?" << endl;
+							cout << "---- Options ----" << endl << "1. Go after the least vicious raccoons" << endl << "2. Go after the leader of the raccoon pack" << endl;
+							cin >> fightingOption2;
+							switch(fightingOption2)
+							{
+								case 1:
+									cout << "Your pet heeds your command. They courageously attack the vicous raccoons before they could get to you. " << endl;
+									cout << "Your pet does enough damage to the raccoons so the rest of them are afraid to attack and you are now safe" << endl;
+									animal.setFighting(5); // set fighting to 5 and break out of loop
+									score +=5;
+									break;
+								case 2:
+									cout << "Your pet goes after the leader of the pack" << endl;
+									cout << "Your pet struggles to fight the raccoon and you get scared that your pet might loose " << endl;
+									cout << "How do help your animal?" << endl;
+									cout << "---- Options ----" << endl << "1. Tell them to go for the raccoon's eyes" << endl << "2. Help him fight the pack leader" << endl;
+									cin >> fightingOption3;
+									switch(fightingOption3)
+									{
+										case 1:
+											cout << "Your pet follows your command and goes for the raccoon's weak spot: the eyes" << endl;
+											cout << "It works and your pet successfully beats the pack leader!" << endl;
+											cout << "Your pet's fighting abilities scare off the other raccoons and you leave the mountains and get to safety." << endl;
+											animal.setFighting(5); // set fighting to 5 and break out of loop
+											score +=5;
+											break;
+										case 2:
+											cout << "You back up your pet and help him defeat the pack leader" << endl;
+											cout << "Your pet sees your fighting skills and learns from you how to fight" << endl;
+											cout << "Your defense skills scare off the other raccoons and you leave the mountains and get to safety." << endl;
+											animal.setFighting(5); // set fighting to 5 and break out of loop
+											score +=5;
+											break;
+									}
+									break;
+							}
+							break;
+							
+						case 3: //dont move
+							cout << "You stand still with your pet. The raccoons stay where they are and continue to growl at you" << endl;
+							cout << "Slowly, the leader of the pack of the raccoons comes forward and gets into attacking position" << endl;
+							cout << "What you you tell your pet?" << endl;
+							cout << "---- Options ----" << endl << "1. Let's fight them off!" << endl << "2. Run away!" << endl;
+							cin >> fightingOption2;
+							switch(fightingOption2)
+							{
+								case 1:
+									score+=1;
+									cout << "Your pet looks to you reassuringly and ready to follow your lead" << endl;
+									cout << "What do you point them to do?" << endl;
+									cout << "---- Options ----" << endl << "1. Go after the least vicious raccoons" << endl << "2. Go after the leader of the raccoon pack" << endl;
+									cin >> fightingOption3;
+									switch(fightingOption3)
+									{
+										case 1:
+											cout << "Your pet heeds your command. They courageously attack the raccoons before they could get to you. " << endl;
+											cout << "Your pet does enough damage to the raccoons so the rest of them are afraid to attack and you are now safe" << endl;
+											animal.setFighting(5); // set fighting to 5 and break out of loop
+											score +=5;
+											break;
+										case 2:
+											cout << "Your pet goes after the leader of the pack" << endl;
+											cout << "Your pet struggles to fight the raccoon and you get scared that your pet might loose " << endl;
+											cout << "How do help your animal?" << endl;
+											cout << "---- Options ----" << endl << "1. Tell them to go for the raccoon's eyes" << endl << "2. Help him fight the pack leader" << endl;
+											cin >> fightingOption4;
+											switch(fightingOption4)
+											{
+												case 1:
+													cout << "Your pet follows your command and goes for the raccoon's weak spot, the eyes" << endl;
+													cout << "It works and your pet successfully beats the pack leader!" << endl;
+													cout << "Your pet's fighting abilities scare off the other raccoons and you leave the mountains and get to safety." << endl;
+													animal.setFighting(5); // set fighting to 5 and break out of loop
+													score +=5;
+													break;
+												case 2:
+													cout << "You back up your pet and help him defeat the pack leader" << endl;
+													cout << "Your pet sees your fighting skills and learns from you how to fight" << endl;
+													cout << "Your defense skills scare off the other raccoons and you leave the mountains and get to safety." << endl;
+													animal.setFighting(5); // set fighting to 5 and break out of loop
+													score +=5;
+													break;
+											}
+											break;
+									}
+									break;
+									
+								case 2:
+									cout << "You and your pet take off but the raccoons chase after you!" << endl;
+									cout << "Your pets agility has not been properly trained so they start to fall behind" << endl;
+									cout << "Before you know it, the raccoons have caught up with your animal and you need to defend yourselves" << endl;
+									cout << "What do you say to your pet?" << endl;
+									cout << "---- Options ----" << endl << "1. Go after the least vicious raccoons" << endl << "2. Go after the leader of the raccoon pack" << endl;
+									cin >> fightingOption2;
+									switch(fightingOption2)
+									{
+										case 1:
+											cout << "Your pet heeds your command. They courageously attack the vicous raccoons before they could get to you. " << endl;
+											cout << "Your pet does enough damage to the raccoons so the rest of them are afraid to attack and you are now safe" << endl;
+											animal.setFighting(5); // set fighting to 5 and break out of loop
+											score +=5;
+											break;
+										case 2:
+											cout << "Your pet goes after the leader of the pack" << endl;
+											cout << "Your pet struggles to fight the raccoon and you get scared that your pet might loose " << endl;
+											cout << "How do help your animal?" << endl;
+											cout << "---- Options ----" << endl << "1. Tell them to go for the raccoon's eyes" << endl << "2. Help him fight the pack leader" << endl;
+											cin >> fightingOption3;
+											switch(fightingOption3)
+											{
+												case 1:
+													cout << "Your pet follows your command and goes for the raccoon's weak spot: the eyes" << endl;
+													cout << "It works and your pet successfully beats the pack leader!" << endl;
+													cout << "Your pet's fighting abilities scare off the other raccoons and you leave the mountains and get to safety." << endl;
+													animal.setFighting(5); // set fighting to 5 and break out of loop
+													score +=5;
+													break;
+												case 2:
+													cout << "You back up your pet and help him defeat the pack leader" << endl;
+													cout << "Your pet sees your fighting skills and learns from you how to fight" << endl;
+													cout << "Your defense skills scare off the other raccoons and you leave the mountains and get to safety." << endl;
+													animal.setFighting(5); // set fighting to 5 and break out of loop
+													score +=5;
+													break;
+											}
+											break;
+									}
+									break;
+							}
+							break;
 					}
-			}
+				}
+				break;
 
 			case 5: //agility - glass
 				cout << "You take your animal to the forest for the day, and you stumble upon a" << endl <<
@@ -879,113 +892,122 @@ Void Play :: playChallenges()
 						break;	
 
 			case 6: //rescue 
-				cout << "You are on a walk through the jungle with your pet when all of a sudden, you fall into a pit of quicksand" << endl;
-				cout << "You need to get help from your pet fast or else you'll suffocate in the sand!" << endl;
-				cout << "What do you tell your pet to do?" << "---- Options ----" << endl << "1. Get a tree brach to pull me out" << endl << "2. Tell them to go get help" << endl;
-				cin >> rescueOption1;
-				switch(rescueOption1)
-				{
-					case 1:
-						cout << "Your pet runs and get a long stick and reaches it out to you" << endl;
-						cout << "They struggle to pull you out because you're so heavy. You need to motivate them to pull you out" << endl;
-						cout << "What do you say to encourage them?" << endl << "---- Options ----" << endl << "1. Plant your feet in the ground! You're so close!" << endl << "2. You suck!! Try harder!" << endl;
-						cin >> rescueOption2;
-						switch(rescueOption2)
-						{
-							case 1:
-								cout << "Your pet feels encouraged and finally lifts you out of the sand pit!" << endl;
-								animal.setRescue(5);
-								score+=5;
-								break;
-							case 2:
-								cout << "Oh no! Your pet doesn't feel encouraged and starts to loose his grip what do you say?" << endl;
-								cout << "---- Options ----" << endl << "1. Plant your feet in the ground! You're so close!" << endl << "2. You can do it! Dont give up! " << endl;
-								cin >> rescueOption3;
-								switch(rescueOption3)
-								{
-									case 1:
-										cout << "Your pet finally feels encouraged and is able to pull you out of the pit and save you!" << endl;
-										animal.setRescue(5);
-										score+=5;
-										break;
-									case 2:
-										cout << "Your pet finally feels encouraged and is able to pull you out of the pit and save you!" << endl;
-										animal.setRescue(5);
-										score+=5;
-										break;
-								}
-						}
-					case 2:
-						cout << "Your pet goes for help and comes back with a tortoise named Billy who is willing to help" << endl;
-						cout << "Billy says to go into the sand pit to dig you out but your pet says to find a stick to pull you out with" << endl;
-						cout << "Who are you going to side with?" << endl; 
-						cout << "---- Options ----" << endl << "1. Billy" << endl << "2. Your pet" << endl;
-						cin >> rescueOption3;
-						switch(rescueOption3)
-						{
-							case 1:
-								cout << "Oh no! Billy tried to help you out and now he is sinking in the sand too!" << endl;
-								cout << "Your last option is to try your pet's idea" << endl;
-								cout << "Your pet runs and get a long stick and saves Billy. He then reaches the stick out to you" << endl;
-								cout << "They struggle to pull you out because you're so heavy. You need to motivate them to pull you out" << endl;
-								cout << "What do you say to encourage them?" << endl << "---- Options ----" << endl << "1. Plant your feet in the ground! You're so close!" << endl << "2. You suck!! Try harder!" << endl;
-								cin >> rescueOption4;
-								switch(rescueOption4)
-								{
-									case 1:
-										cout << "Your pet feels encouraged and finally lifts you out of the sand pit!" << endl;
-										animal.setRescue(5);
-										score+=5;
-										break;
-									case 2:
-										cout << "Oh no! Your pet doesn't feel encouraged and starts to loose his grip what do you say?" << endl;
-										cout << "---- Options ----" << endl << "1. Plant your feet in the ground! You're so close!" << endl << "2. You can do it! Dont give up! " << endl;
-										cin >> rescueOption5;
-										switch(rescueOption5)
-										{
-											case 1:
-												cout << "Your pet finally feels encouraged and is able to pull you out of the pit and save you!" << endl;
-												animal.setRescue(5);
-												score+=5;
-												break;
-											case 2:
-												cout << "Your pet finally feels encouraged and is able to pull you out of the pit and save you!" << endl;
-												animal.setRescue(5);
-												score+=5;
-												break;
-										}
-								}
-							case 2:
-								cout << "Your pet runs and get a long stick and reaches it out to you" << endl;
-								cout << "They struggle to pull you out because you're so heavy. You need to motivate them to pull you out" << endl;
-								cout << "What do you say to encourage them?" << endl << "---- Options ----" << endl << "1. Plant your feet in the ground! You're so close!" << endl << "2. You suck!! Try harder!" << endl;
-								cin >> rescueOption2;
-								switch(rescueOption2)
-								{
-									case 1:
-										cout << "Your pet feels encouraged and finally lifts you out of the sand pit!" << endl;
-										score+=5;
-										break;
-									case 2:
-										cout << "Oh no! Your pet doesn't feel encouraged and starts to loose his grip what do you say?" << endl;
-										cout << "---- Options ----" << endl << "1. Plant your feet in the ground! You're so close!" << endl << "2. You can do it! Dont give up! " << endl;
-										cin >> rescueOption3;
-										switch(rescueOption3)
-										{
-											case 1:
-												cout << "Your pet finally feels encouraged and is able to pull you out of the pit and save you!" << endl;
-												animal.setRescue(5);
-												score+=5;
-												break;
-											case 2:
-												cout << "Your pet finally feels encouraged and is able to pull you out of the pit and save you!" << endl;
-												animal.setRescue(5);
-												score+=5;
-												break;
-										}
-								}
-						}
+				int score6 = animal.getRescue();
+				while (score6<5){
+					cout << "You are on a walk through the jungle with your pet when all of a sudden, you fall into a pit of quicksand" << endl;
+					cout << "You need to get help from your pet fast or else you'll suffocate in the sand!" << endl;
+					cout << "What do you tell your pet to do?" << "---- Options ----" << endl << "1. Get a tree brach to pull me out" << endl << "2. Tell them to go get help" << endl;
+					cin >> rescueOption1;
+					switch(rescueOption1)
+					{
+						case 1:
+							cout << "Your pet runs and get a long stick and reaches it out to you" << endl;
+							cout << "They struggle to pull you out because you're so heavy. You need to motivate them to pull you out" << endl;
+							cout << "What do you say to encourage them?" << endl << "---- Options ----" << endl << "1. Plant your feet in the ground! You're so close!" << endl << "2. You suck!! Try harder!" << endl;
+							cin >> rescueOption2;
+							switch(rescueOption2)
+							{
+								case 1:
+									cout << "Your pet feels encouraged and finally lifts you out of the sand pit!" << endl;
+									animal.setRescue(5); // set score to 5 and break out of loop
+									score+=5;
+									break;
+								case 2:
+									cout << "Oh no! Your pet doesn't feel encouraged and starts to loose his grip what do you say?" << endl;
+									cout << "---- Options ----" << endl << "1. Plant your feet in the ground! You're so close!" << endl << "2. You can do it! Dont give up! " << endl;
+									cin >> rescueOption3;
+									switch(rescueOption3)
+									{
+										case 1:
+											cout << "Your pet finally feels encouraged and is able to pull you out of the pit and save you!" << endl;
+											animal.setRescue(5); // set score to 5 and break out of loop
+											score+=5;
+											break;
+										case 2:
+											cout << "Your pet finally feels encouraged and is able to pull you out of the pit and save you!" << endl;
+											animal.setRescue(5); // set score to 5 and break out of loop
+											score+=5;
+											break;
+									}
+							}
+						case 2:
+							cout << "Your pet goes for help and comes back with a tortoise named Billy who is willing to help" << endl;
+							cout << "Billy says to go into the sand pit to dig you out but your pet says to find a stick to pull you out with" << endl;
+							cout << "Who are you going to side with?" << endl; 
+							cout << "---- Options ----" << endl << "1. Billy" << endl << "2. Your pet" << endl;
+							cin >> rescueOption3;
+							switch(rescueOption3)
+							{
+								case 1:
+									cout << "Oh no! Billy tried to help you out and now he is sinking in the sand too!" << endl;
+									cout << "Your last option is to try your pet's idea" << endl;
+									cout << "Your pet runs and get a long stick and saves Billy. He then reaches the stick out to you" << endl;
+									cout << "They struggle to pull you out because you're so heavy. You need to motivate them to pull you out" << endl;
+									cout << "What do you say to encourage them?" << endl << "---- Options ----" << endl << "1. Plant your feet in the ground! You're so close!" << endl << "2. You suck!! Try harder!" << endl;
+									cin >> rescueOption4;
+									switch(rescueOption4)
+									{
+										case 1:
+											cout << "Your pet feels encouraged and finally lifts you out of the sand pit!" << endl;
+											animal.setRescue(5); // set score to 5 and break out of loop
+											score+=5;
+											break;
+										case 2:
+											cout << "Oh no! Your pet doesn't feel encouraged and starts to loose his grip what do you say?" << endl;
+											cout << "---- Options ----" << endl << "1. Plant your feet in the ground! You're so close!" << endl << "2. You can do it! Dont give up! " << endl;
+											cin >> rescueOption5;
+											switch(rescueOption5)
+											{
+												case 1:
+													cout << "Your pet finally feels encouraged and is able to pull you out of the pit and save you!" << endl;
+													animal.setRescue(5); // set score to 5 and break out of loop
+													score+=5;
+													break;
+												case 2:
+													cout << "Your pet finally feels encouraged and is able to pull you out of the pit and save you!" << endl;
+													animal.setRescue(5); // set score to 5 and break out of loop
+													score+=5;
+													break;
+											}
+											break;
+									}
+									break;
+								case 2:
+									cout << "Your pet runs and get a long stick and reaches it out to you" << endl;
+									cout << "They struggle to pull you out because you're so heavy. You need to motivate them to pull you out" << endl;
+									cout << "What do you say to encourage them?" << endl << "---- Options ----" << endl << "1. Plant your feet in the ground! You're so close!" << endl << "2. You suck!! Try harder!" << endl;
+									cin >> rescueOption2;
+									switch(rescueOption2)
+									{
+										case 1:
+											cout << "Your pet feels encouraged and finally lifts you out of the sand pit!" << endl;
+											animal.setRescue(5); // set score to 5 and break out of loop
+											score+=5;
+											break;
+										case 2:
+											cout << "Oh no! Your pet doesn't feel encouraged and starts to loose his grip what do you say?" << endl;
+											cout << "---- Options ----" << endl << "1. Plant your feet in the ground! You're so close!" << endl << "2. You can do it! Dont give up! " << endl;
+											cin >> rescueOption3;
+											switch(rescueOption3)
+											{
+												case 1:
+													cout << "Your pet finally feels encouraged and is able to pull you out of the pit and save you!" << endl;
+													animal.setRescue(5); // set score to 5 and break out of loop
+													score+=5;
+													break;
+												case 2:
+													cout << "Your pet finally feels encouraged and is able to pull you out of the pit and save you!" << endl;
+													animal.setRescue(5); // set score to 5 and break out of loop
+													score+=5;
+													break;
+											}
+											break;
+									}
+									break;
+							}
+					}
 				}
+				break;
 	} while (challenge !=0);
 }
 							 
