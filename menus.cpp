@@ -81,3 +81,29 @@ Int Menus :: endOfTierMenu( )
     // returns user choice
     return userChoice;
 }
+
+Int Menus :: endOfChallenge()
+{
+    animal.printStats();
+    cout << "==== MENU ====" << endl << "1. Do challenges" << endl << "2. Save and quit" << endl;
+    int userInput;
+    cin >> userInput;
+    if (userInput == 1)
+    {
+        animal.findChallenge();
+        cout << "Which challenge would you like to do? Make sure you pick one you haven't done yet!" << endl;
+        int challengeChoice;
+        cin >> challengeChoice;
+        return challengeChoice;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+
+
+
+
+
